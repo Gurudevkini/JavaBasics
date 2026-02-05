@@ -1,0 +1,2 @@
+package Decsion_Statment.Assingnment_1;
+// CHECK WHETHER THE NUMBER IS POSTIVE NEGATIVE OR ZERO
