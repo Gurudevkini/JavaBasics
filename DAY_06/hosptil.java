@@ -1,11 +1,13 @@
+import java.util.*;
+
 public class hosptil 
 {
 
-  private class patient 
+  class patient 
   {
-    String patientId;
-    String name;
-    int age;
+  private  String patientId;
+  private String name;
+  private   int age;
   }
 public static void main(String[] args) {
   System.out.println(patient);
