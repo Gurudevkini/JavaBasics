@@ -1,0 +1,276 @@
+1. A class in Java is:
+
+A) An object
+B) A function
+C) A blueprint for creating objects
+D) A package
+
+
+
+2. Which keyword is used to create an object in Java?
+
+A) class
+B) new
+C) this
+D) object
+
+
+
+3. Non-static variables are also called:
+
+A) Class variables
+B) Static variables
+C) Instance variables
+D) Final variables
+
+
+
+4. Where are non-static variables stored?
+
+A) In method area
+B) In heap memory
+C) In stack memory
+D) In CPU register
+
+
+
+5. How many copies of a non-static variable are created?
+
+A) One per class
+B) One per method
+C) One per object
+D) Only one
+
+
+
+6. What is the default value of an int non-static variable?
+
+A) 1
+B) 0
+C) null
+D) garbage
+
+
+
+7. Constructor is used to:
+
+A) Destroy an object
+B) Create a class
+C) Initialize an object
+D) Call a method
+
+
+
+8. Constructor name must be:
+
+A) Same as variable name
+B) Same as method name
+C) Same as class name
+D) Any name
+
+
+9. Does a constructor have a return type?
+
+A) Yes
+B) No
+
+10. If no constructor is written, Java provides:
+
+A) Parameterized constructor
+B) Static constructor
+C) Default constructor
+D) Final constructor
+
+
+
+
+
+
+11. Predict the output:
+class Test {
+    int x;
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t.x);
+    }
+}
+
+
+A) 1
+B) 0
+C) null
+D) Compile error
+Answer: B
+
+12. Predict the output:
+class Demo {
+    int a = 10;
+    public static void main(String[] args) {
+        Demo d1 = new Demo();
+        Demo d2 = new Demo();
+        d2.a = 20;
+        System.out.println(d1.a);
+    }
+}
+
+
+A) 10
+B) 20
+C) 0
+D) Compile error
+
+
+13. Which of the following can access non-static variables directly?
+
+A) Static method
+B) Constructor
+C) Static block
+D) main method without object
+
+
+14. Predict the output:
+class Sample {
+    int x = 5;
+    Sample() {
+        x = 10;
+    }
+    public static void main(String[] args) {
+        Sample s = new Sample();
+        System.out.println(s.x);
+    }
+}
+
+
+A) 5
+B) 0
+C) 10
+D) Compile error
+
+
+15. Non-static variables are accessed using:
+
+A) Class name
+B) Object reference
+C) Package name
+D) Constructor name
+
+
+16. Predict the output:
+class A {
+    int x;
+    A(int x) {
+        this.x = x;
+    }
+    public static void main(String[] args) {
+        A a = new A(50);
+        System.out.println(a.x);
+    }
+}
+
+
+A) 0
+B) 10
+C) 50
+D) Compile error
+
+
+17. Which statement is TRUE?
+
+A) One object can access another object's non-static variable directly
+B) Non-static variables belong to class
+C) Each object has its own copy of non-static variables
+D) Non-static variables are shared
+
+
+18. Predict the output:
+class Test {
+    int x = 10;
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        t1.x = 30;
+        Test t2 = new Test();
+        System.out.println(t2.x);
+    }
+}
+
+
+A) 10
+B) 30
+C) 0
+D) Compile error
+
+
+19. Can a constructor be overloaded?
+
+A) Yes
+B) No
+
+
+20. Predict the output:
+class Demo {
+    int x;
+    Demo() {
+        x = 5;
+    }
+    Demo(int a) {
+        x = a;
+    }
+    public static void main(String[] args) {
+        Demo d = new Demo(20);
+        System.out.println(d.x);
+    }
+}
+
+
+A) 5
+B) 0
+C) 20
+D) Compile error
+
+
+21. Which is NOT allowed in constructor?
+
+A) Method call
+B) Variable initialization
+C) Return statement with value
+D) Overloading
+
+
+22. Predict the output:
+class Test {
+    int x = 10;
+    public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t);
+    }
+}
+
+
+A) 10
+B) Compile error
+C) Runtime error
+D) ClassName@HashCode
+
+
+23. Object creation happens in:
+
+A) Stack memory
+B) Heap memory
+C) Method area
+D) Register
+
+
+24. What happens when an object is created?
+
+A) Constructor is called
+B) Memory is allocated
+C) Non-static variables get default values
+D) All of the above
+
+
+25. Class is loaded into memory when:
+
+A) Object is created
+B) Program is compiled
+C) Program is executed
+D) Constructor is called

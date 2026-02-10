@@ -1,0 +1,681 @@
+Create College class with:
+collegeName
+city
+Create Course class that extends College with:
+courseName
+duration
+Create Student class that extends Course with:
+rollNo
+studentName
+Create Result class that extends Student with:
+marks1, marks2, marks3
+👉 Calculate:
+totalMarks
+percentage
+grade (A/B/C/Fail)
+Display full student result details.
+================================================
+
+
+
+
+Create OnlinePlatform class with:
+platformName
+Create User class that extends OnlinePlatform with:
+userId
+userName
+Create Seller class that extends User with:
+totalSales
+Create Buyer class that extends User with:
+totalPurchases
+
+
+
+
+
+
+
+
+
+👉 Display seller and buyer details separately.
+==============================================
+
+
+
+
+Create SmartDevice class with:
+brand
+Create Device class that extends SmartDevice with:
+batteryPercentage
+Create SmartWatch class that extends Device with:
+heartRate
+stepsCount
+👉 Add method to:
+
+
+
+
+
+
+
+check battery status (Low / Medium / Full)
+display fitness summary
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created 9:17 AM9:17 AM
+1️⃣ University → Student → Exam
+
+Task:
+Create University class with:
+universityName
+location
+
+Create Student class that extends University with:
+rollNumber
+name
+Create Exam class that extends Student with:
+subject
+marks
+Calculate and display student exam details.
+======================================================================
+2️⃣ Employee → Engineer → TeamLead
+Task:
+Create Employee class with:
+empId
+name
+basicSalary
+
+Create Engineer class that extends Employee with:
+skillSet
+Create TeamLead class that extends Engineer with:
+incentive
+Calculate total salary of TeamLead.
+======================================================
+3️⃣ Bank → Account → SavingsAccount
+Task:
+Create Bank class with:
+bankName
+branch
+Create Account class that extends Bank with:
+accountNumber
+balance
+
+Create SavingsAccount class that extends Account with:
+interestRate
+Add method to calculate and display interest.
+=====================================================
+4️⃣ Vehicle → Car / Truck
+Task:
+Create Vehicle class with:
+vehicleNumber
+brand
+speed
+
+Create Car class that extends Vehicle with:
+fuelType
+Create Truck class that extends Vehicle with:
+loadCapacity
+Display details of both vehicles.
+===============================================================
+5️⃣Person → Employee → Manager
+Task:
+Create Person class with:
+name
+age
+Create Employee class that extends Person with:
+empId
+salary
+Create Manager class that extends Employee with:
+department
+bonus
+Calculate total salary.
+===========================================================================
+7️⃣ Store → Product → DiscountedProduct
+Task:
+Create Store class with:
+storeName
+Create Product class that extends Store with:
+productId
+price
+Create DiscountedProduct class that extends Product with:
+discountPercentage
+Calculate final price after discount.
+=================================================================
+8️⃣ Hospital → Staff → Doctor
+Task:
+Create Hospital class with:
+hospitalName
+Create Staff class that extends Hospital with:
+staffId
+Create Doctor class that extends Staff with:
+specialization
+consultationFee
+Display doctor details.
+====================================================
+9️⃣ Company → Department → Employee
+Task:
+Create Company class with:
+companyName
+Create Department class that extends Company with:
+departmentName
+Create Employee class that extends Department with:
+empId
+salary
+Display complete employee details.
+========================================================
+🔟 Transport System
+Task:
+Create Transport class with:
+transportType
+Create Bus class that extends Transport with:
+routeNumber
+Create Train class that extends Transport with:
+coachCount
+Display transport details.
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+package inheritance;
+
+public class Father {
+   String name ="Abc";
+}
+
+class Son extends Father{
+   
+   String name ="Xyz";
+   
+   void details() {
+       System.out.println("My name is : "+name);
+       
+       System.out.println("Father name is : "+super.name );
+   }
+   
+}
+
+package inheritance;
+
+public class SonDriver {
+
+   public static void main(String[] args) {
+       
+       Son s=new Son();
+       s.details();
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+package inheritance;
+
+public class Doctor {
+
+   void checkBp() {
+       System.out.println("Checking BP!!!!");
+   }
+   
+   void checkFever() {
+       System.out.println("Checking fever!!");
+   }
+   
+}
+
+class Cardiologist extends Doctor {
+
+   //2 ==>methods inherited ==> checkBp() and checkFever()
+   
+   // 2==> methods created
+   void Cardio() {
+       System.out.println("Cardio from cardiologist");
+   }
+   
+   void fracture() {
+       System.out.println("Fracture from cardiologist");
+   }
+}
+
+package inheritance;
+
+public class DoctorDriver {
+
+   public static void main(String[] args) {
+       Cardiologist c=new Cardiologist();
+       
+       c.checkBp();
+       c.checkFever();
+       c.Cardio();
+       c.fracture();
+   }
+   
+   
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+package inheritance;
+
+public class Car {
+
+   String name="Suzuki" ;//brand
+   int passenger =6;
+   void drive() {
+       System.out.println("Driving "+ name);
+   }
+   
+}
+
+class Mini extends Car{
+   
+   int passenger=4;//max capacity
+   String name="Waganor";//model
+   void passenger() {
+       System.out.println("Number of passenger tarvelling " + super.passenger+ " in : "+super.name+" car");
+   }
+
+}
+
+package inheritance;
+
+public class CarDriver {
+
+   public static void main(String[] args) {
+       
+       Mini m=new Mini();
+       
+       m.drive();
+       m.passenger();
+               
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+package overriding;
+
+public class Sheela {
+
+   protected void dance() {
+       System.out.println("Classical");
+   }
+}
+
+class Shivani extends Sheela{
+   public void dance() {
+       System.out.print("Parent class mem : ");
+       super.dance();
+       System.out.println("Western");
+   }
+}
+
+package overriding;
+
+public class Driver {
+
+   public static void main(String[] args) {
+       
+       Shivani s=new Shivani();
+       s.dance();
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+package overriding;
+
+public class Animal {
+
+   void sound() {
+       System.out.println("Animal's sound!!!");
+   }
+}
+
+class Dog extends Animal{
+   
+   public void sound() {
+       System.out.println("Barkinggg");
+   }
+}
+
+class Cat extends Animal{
+   
+   void sound() {
+       System.out.println("Meooowwww");
+   }
+}
+
+package overriding;
+
+public class AnimalDriver {
+   
+   public static void main(String[] args) {
+       Cat c=new Cat();
+       c.sound();
+       
+       Dog d=new Dog();
+       d.sound();
+       
+       Animal a=new Animal();
+       a.sound();
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created YesterdayYesterday
+1️⃣ Person → Student
+Task:
+Create a Person class with:
+name
+age
+Create a Student class that inherits Person and adds:
+rollNumber
+marks
+Display all details.
+==========================================================
+2️⃣ Employee Hierarchy
+Task:
+Create Employee class:
+empId
+name
+salary
+Create Manager class:
+department
+bonus
+Calculate total salary of manager.
+==============================================================
+
+3️⃣Vehicle Information
+
+Task:
+
+Create Vehicle class:
+brand
+speed
+Create Car class:
+fuelType
+Create Bike class:
+engineCapacity
+
+Print details of each vehicle.
+
+================================================
+Bank Account
+
+Task:
+
+Account class:
+accountNumber
+balance
+SavingsAccount extends Account:
+interestRate
+Add method to calculate interest.
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created Feb 7Feb 7
+1️⃣ Car Rental System
+Create a Car class with private fields carId, brand, and rentPerDay.
+
+Ensure rent cannot be negative
+
+Provide methods to calculate rent for given days
+
+Use getters and setters only
+
+2️⃣ ATM Account
+Create an ATMAccount class with private fields accountNumber and pin.
+
+PIN must be exactly 4 digits
+
+Do not allow direct access to PIN
+
+Provide a method to verify PIN
+
+3️⃣ Hospital Patient Record
+Create a Patient class with private variables patientId, name, and age.
+
+Age must be between 1 and 120
+
+Display patient details using a public method
+
+4️⃣ Movie Ticket Booking
+Create a MovieTicket class with private fields movieName, seatNumber, and price.
+
+Ensure seat number is greater than 0
+
+Price must be positive
+
+Provide a method to display ticket details
+
+5️⃣ Bank Loan System
+Create a Loan class with private fields loanId, customerName, and loanAmount.
+
+Loan amount must be greater than 50,000
+
+Prevent direct access to loan amount
+
+Validate data using setters
+
+6️⃣ Employee Attendance System
+Create an Attendance class with private fields employeeId, workingDays, and presentDays.
+
+Present days cannot exceed working days
+
+Use methods to calculate attendance percentage
+
+7️⃣ Online Exam System
+Create an Exam class with private variables examId, subject, and duration.
+
+Duration must be between 30 and 180 minutes
+
+Display exam details using a method
+
+8️⃣ Electricity Bill
+Create an ElectricityBill class with private fields consumerId, unitsConsumed, and billAmount.
+
+Units consumed cannot be negative
+
+Calculate bill amount using a public method
+
+9️⃣ Hotel Room Booking
+Create a Room class with private fields roomNumber, roomType, and isBooked.
+
+Allow booking only if the room is not already booked
+
+Provide methods to book and cancel room
+
+🔟 Insurance Policy
+Create an Insurance class with private fields policyNumber, policyHolderName, and premiumAmount.
+
+Premium must be greater than zero
+
+Demonstrate data hiding using proper methods
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created Feb 7Feb 7
+package encaps.hasA;
+
+public class CarDriver {
+
+   public static void main(String[] args) {
+       Car c = new Car();
+       
+       Car c1 = new Car("City");//model
+       
+       Car c2 =new Car("Ertiga", " Suzuki");
+//        
+//        System.out.println(c.getBrand() );
+//        
+//        System.out.println( c1.getBrand());
+//        System.out.println(c1.getModel());
+//        
+//        System.out.println(c2.getBrand());
+       
+       Car car= new Car("Inova","totyota");
+       System.out.println(car.e);
+       
+       
+       
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created Feb 7Feb 7
+package encaps.hasA;
+
+public class Car {
+
+   private String model;//ertiga
+   private String brand;
+   
+   public String getModel() {
+       return model;
+   }
+   public String getBrand() {
+       return brand;
+   }
+   public void setModel(String model) { //ertiga
+       this.model = model; //ertiga
+   }
+   public void setBrand(String brand) {
+       this.brand = brand;
+   }
+   
+   Engine e = new Engine(); //null or ref
+   
+   Car(){
+       
+   }
+   
+   Car( String model){//ertiga
+       setModel(model); //ertige
+   }
+   
+   Car(String model, String brand){ //ertiga
+//        setModel(model);
+       this( model );//this call statement ==>ertiga
+       setBrand(brand);
+   }
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created Feb 7Feb 7
+package encaps.hasA;
+
+public class Engine {
+
+   private double hp;
+
+   public double getHp() {
+       return hp;
+   }
+
+   public void setHp(double hp) {
+       this.hp = hp;
+   }
+   
+   Engine(){
+       System.out.println("Engine is getting start");
+   }
+   
+   Engine(double hp){
+       setHp(hp);
+       System.out.println("horse power is set : "+hp);
+   }
+   
+   
+}
+
+Post by Jayesh Jogi
+Jayesh Jogi
+Created Feb 7Feb 7
+BankAccount Class
+Create a BankAccount class with private fields accountNumber, accountHolderName, and balance.
+
+Provide public getters and setters
+
+Validate that the balance cannot be negative
+
+Add methods to deposit() and withdraw() with proper validation
+
+===========================================================================
+
+Student Class
+Create a Student class with private variables rollNumber, name, and marks.
+
+Use setters to ensure marks are between 0 and 100
+
+Display student details using a public method
+
+===========================================================================
+
+
+Employee Salary Validation
+Design an Employee class with private fields employeeId, name, and salary.
+
+Prevent salary from being set below a minimum value (e.g., 10,000)
+
+Demonstrate data hiding by accessing fields only through methods
+
+===========================================================================
+
+User Login System
+Create a User class with private variables username and password.
+
+Validate that the password must be at least 8 characters long
+
+Do not allow direct access to the password field
+
+===========================================================================
+
+Mobile Phone Class
+Create a Mobile class with private attributes brand, model, and price.
+
+Ensure price cannot be zero or negative
+
+Use getter and setter methods to control access
+
+===========================================================================
+
+Library Book Management
+Create a Book class with private fields bookId, title, and issuedStatus.
+
+Allow issuing a book only if it is not already issued
+
+Use methods to update and check status
+
+===========================================================================
+
+Age Validation
+Create a Person class with private variables name and age.
+
+Validate that age must be greater than 0 and less than 120
+
+Display a message if invalid data is entered
+
+===========================================================================
+
+Online Shopping Product
+Design a Product class with private fields productId, productName, and quantity.
+
+Prevent quantity from being set to a negative value
+
+Demonstrate encapsulation using proper methods
+
+===========================================================================
+
+Exam Registration System
+Create a Candidate class with private fields candidateId, name, and examFee.
+
+Validate that exam fee must be greater than zero
+
+Show how data hiding protects sensitive information
